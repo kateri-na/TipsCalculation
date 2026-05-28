@@ -5,12 +5,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 public class TipResult {
-    private Double billAmount;
-    private Double tipsAmount;
-    private Double total;
+    private BigDecimal billAmount;
+    private BigDecimal tipsAmount;
+    private BigDecimal total;
 }

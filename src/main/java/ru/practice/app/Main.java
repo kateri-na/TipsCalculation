@@ -1,5 +1,7 @@
 package ru.practice.app;
 
+import java.math.BigDecimal;
+
 /*
     Данная программа рассчитывает итоговый счет для посетителей с учетом чаевых
     Их сумма зависит от количества гостей за столом и от качества обслуживания
@@ -10,7 +12,7 @@ package ru.practice.app;
 */
 public class Main {
     public static void main(String[] args) {
-        Bill bill = new Bill(17, 3500.00, 12, ServiceQuality.EXCELLENT);
+        Bill bill = new Bill(17, BigDecimal.valueOf(3500.00), 12, ServiceQuality.EXCELLENT);
         TipResult result = TipsCalculator.calculateTips(bill);
 
         System.out.println("Счет: " + result.getBillAmount());
